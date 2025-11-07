@@ -24,15 +24,20 @@ body {
   background: linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.25));
 }
 
-.logo-area { display:flex; gap:14px; align-items:center; }
+.logo-area { display:flex; gap:20px; align-items:center; }
 .logo-icon {
-  width:56px; height:56px;
-  border-radius: 14px;
-  background: linear-gradient(135deg,#b11226,#ff2d2d);
-  box-shadow: 0 8px 30px rgba(177,18,38,0.28), inset 0 -6px 18px rgba(0,0,0,0.35);
-  transform: rotate(-8deg);
+  display: flex;
+  width: 50px;
+  height: 70px;
+  margin: 2px;
 }
-.logo-text h1 { margin:0; font-size:18px; letter-spacing:0.3px; }
+
+
+.logo-text h1 { margin:0; font-size:18px; letter-spacing:0.3px; transition: 0.4s ease;}
+.logo-text h1:hover {
+  color: #c00000;
+  text-shadow: 0 0 8px #c00000;
+}
 .logo-text p { margin:2px 0 0 0; font-size:12px; color:#cfcfcf; }
 
 /* Buttons */
