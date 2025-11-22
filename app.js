@@ -48,7 +48,7 @@ symbols.forEach(s => {
 
     <div class="actions">
       <button class="call">Detalhes</button>
-      <button class="map">Pesquisar</button>
+      <button class="map"><img src="./imagens/search.png"></button>
     </div>
   `;
 
@@ -93,11 +93,12 @@ workshops.forEach(w => {
     <div class="muted">Especialidades: ${w.specialties.join(', ')}</div>
 
     <div style="margin-top:10px;display:flex;gap:8px;">
+    
       <a 
         class="call"
         href="tel:${w.phone.replace(/\D/g,'')}"
-        style="flex:1;text-decoration:none;padding:10px;border-radius:10px;background:rgba(255,255,255,0.04);text-align:center;color:#fff;">
-        Ligar
+        style="flex:1;text-decoration:none;padding:10px;border-radius:10px;background:rgba(255,255,255,0.04);text-align:center;color:#fff;;flex-direction: column;justify-items: center;">
+        <img src="./imagens/call.png">
       </a>
 
       <a

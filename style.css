@@ -3,6 +3,7 @@
 =========================== */
 * {
   box-sizing: border-box;
+  font-family: 'Orbitron', sans-serif;
 }
 
 html, body {
@@ -63,23 +64,32 @@ body {
   margin: 2px;
 }
 
+/* Título com animação de brilho */
 .logo-text h1 {
   margin: 0;
   font-size: 18px;
   letter-spacing: 0.3px;
-  transition: 0.4s ease;
+  color: #fff;
+  text-shadow: 0 0 0px #e2c800; /* começa sem brilho */
+  animation: glow 4s infinite alternate;
 }
 
-.logo-text h1:hover {
-  color: #c00000;
-  text-shadow: 0 0 8px #c00000;
+/* Animação de brilho */
+@keyframes glow {
+  0% {
+    color: #fff;
+    text-shadow: 0 0 0px #c00000;
+  }
+  70% {
+    color: #c7c000;
+    text-shadow: 0 0 8px #fff700, 0 0 16px #ff2d2d;
+  }
+  100% {
+    color: #fff;
+    text-shadow: 0 0 0px #c00000;
+  }
 }
 
-.logo-text p {
-  margin: 2px 0 0;
-  font-size: 12px;
-  color: #cfcfcf;
-}
 
 
 /* ===========================
@@ -132,6 +142,11 @@ body {
 .hero-text {
   flex: 1;
   max-width: 640px;
+}
+
+#problema {
+  color: rgb(255, 0, 0);
+  text-shadow: 0 0 2px #ff0000;
 }
 
 .hero-text h2 {
