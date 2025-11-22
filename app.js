@@ -170,3 +170,62 @@ document.querySelectorAll('.btn-main, .btn-outline, #heroWorkshops')
 el('aboutBtn').addEventListener('click', () => {
   alert('SOS Motors — Demo. Adicione informações reais na área administrativa.');
 });
+// =========================
+// SINTOMAS - QUICK SELECT
+// =========================
+const symptoms = [
+  { name: 'Motor superaquecendo', desc: 'Verifique o líquido de arrefecimento e aguarde antes de dirigir.' },
+  { name: 'Falha no ABS', desc: 'Sistema de freios com problemas. Dirija com cuidado e procure assistência.' },
+  { name: 'Bateria fraca', desc: 'Pode deixar o carro sem energia elétrica. Cheque o alternador/bateria.' },
+  { name: 'Airbag', desc: 'Problema no sistema de airbags — segurança comprometida.' }
+];
+
+const symptomsGrid = el('symptoms-grid');
+
+symptoms.forEach(s => {
+  const btn = create('button');
+  btn.className = 'symptom-btn';
+  btn.textContent = s.name;
+
+  btn.addEventListener('click', () => {
+    openModal('Sintoma Selecionado', s.desc, '');
+  });
+
+  symptomsGrid.appendChild(btn);
+});
+
+
+// =========================
+// EMERGÊNCIA
+// =========================
+const emergencyBtn = el('emergency-btn');
+
+emergencyBtn.addEventListener('click', () => {
+  openModal(
+    'Emergência!',
+    'Se você estiver em situação crítica, chame imediatamente o socorro ou leve o veículo para uma oficina segura.',
+    'Ligue: 192 / Consulte oficina mais próxima'
+  );
+});
+
+
+// =========================
+// AVALIAÇÕES / REVIEWS
+// =========================
+const reviews = [
+  { text: 'Excelente atendimento e rapidez no serviço!', author: 'João P.' },
+  { text: 'Profissionais competentes, solucionaram meu problema em tempo recorde.', author: 'Maria E.' },
+  { text: 'Recomendo a todos que precisam de diagnósticos confiáveis.', author: 'Carlos T.' }
+];
+
+const reviewsGrid = el('reviews-grid');
+
+reviews.forEach(r => {
+  const card = create('div');
+  card.className = 'review-card';
+  card.innerHTML = `
+    <div class="review-text">${r.text}</div>
+    <div class="review-author">— ${r.author}</div>
+  `;
+  reviewsGrid.appendChild(card);
+});
