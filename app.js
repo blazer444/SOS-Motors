@@ -1,6 +1,5 @@
-// =========================
-// DADOS INICIAIS
-// =========================
+
+// Dados Iniciais
 const symbols = [
   { id: 'engine', title: 'Check Engine', severity: 'Grave', desc: 'Pode indicar falha no motor, sensor, injeção ou catalisador. Evite dirigir por longas distâncias.' },
   { id: 'oil', title: 'Pressão do óleo', severity: 'Crítico', desc: 'Baixa pressão de óleo. Pare o veículo imediatamente e verifique o nível/óleo vazando.' },
@@ -16,164 +15,116 @@ const workshops = [
   { name: 'Elite Motors', address: 'R. 7 de Setembro, 45 - Vila Bianchi', phone: '(16) 99999-0003', rating: 4.9, specialties: ['Carros premium', 'Eletrônica', 'Serviço rápido'] }
 ];
 
-
-// =========================
-// HELPERS
-// =========================
+// Helpers
 const el = id => document.getElementById(id);
 const create = tag => document.createElement(tag);
 
+// RODAPÉ - atualiza o ano atual
+if (el('year')) el('year').textContent = new Date().getFullYear();
 
-// =========================
-// RODAPÉ
-// =========================
-el('year').textContent = new Date().getFullYear();
-
-
-// =========================
-// GRID DE SÍMBOLOS
-// =========================
+// Grid de simbolos
 const symbolsGrid = el('symbols');
 const dashSymbols = el('dashSymbols');
 
-symbols.forEach(s => {
+if (symbolsGrid) {
+  symbols.forEach(s => {
+    const card = create('div');
+    card.className = 'card';
+    card.innerHTML = `
+      <div class="title">${s.title}</div>
+      <div class="desc">${s.desc.substring(0, 120)}</div>
+      <div class="muted">Gravidade: ${s.severity}</div>
+      <div class="actions">
+        <button class="call">Detalhes</button>
+        <button class="map"><img src="./imagens/search.png" alt="buscar"></button>
+      </div>
+    `;
 
-  // Card principal
-  const card = create('div');
-  card.className = 'card';
-  card.innerHTML = `
-    <div class="title">${s.title}</div>
-    <div class="desc">${s.desc.substring(0,120)}</div>
-    <div class="muted">Gravidade: ${s.severity}</div>
+    const detailsBtn = card.querySelector('.call');
+    detailsBtn && detailsBtn.addEventListener('click', () => openModal(s.title, s.desc, `Gravidade: ${s.severity}`));
 
-    <div class="actions">
-      <button class="call">Detalhes</button>
-      <button class="map"><img src="./imagens/search.png"></button>
-    </div>
-  `;
+    const mapBtn = card.querySelector('.map');
+    mapBtn && mapBtn.addEventListener('click', () => {
+      const q = encodeURIComponent(s.title + ' painel carro');
+      window.open('https://www.google.com/search?q=' + q, '_blank');
+    });
 
-  // Modal - detalhes
-  const detailsBtn = card.querySelector('.call');
-  detailsBtn.addEventListener('click', () => 
-    openModal(s.title, s.desc, `Gravidade: ${s.severity}`)
-  );
-
-  // Pesquisar no Google
-  card.querySelector('.map').addEventListener('click', () => {
-    const q = encodeURIComponent(s.title + ' painel carro');
-    window.open('https://www.google.com/search?q=' + q, '_blank');
+    symbolsGrid.appendChild(card);
   });
+}
 
-  symbolsGrid.appendChild(card);
+if (dashSymbols) {
+  symbols.forEach(s => {
+    const small = create('div');
+    small.className = 'dash-card';
+    small.innerHTML = `<div class="label">${s.title}</div><div class="mini">${s.severity}</div>`;
+    dashSymbols.appendChild(small);
+  });
+}
 
-  // Mini-card (dashboard)
-  const small = create('div');
-  small.className = 'dash-card';
-  small.innerHTML = `
-    <div class="label">${s.title}</div>
-    <div class="mini">${s.severity}</div>
-  `;
-
-  dashSymbols.appendChild(small);
-});
-
-
-// =========================
-// LISTA DE OFICINAS
-// =========================
+// Lista de oficinas
 const workshopGrid = el('workshop-list');
+if (workshopGrid) {
+  workshops.forEach(w => {
+    const card = create('div');
+    card.className = 'card';
+    card.innerHTML = `
+      <div class="title">${w.name}</div>
+      <div class="desc">${w.address}</div>
+      <div class="muted">Especialidades: ${w.specialties.join(', ')}</div>
+      <div style="margin-top:10px;display:flex;gap:8px;">
+        <a class="call" href="tel:${w.phone.replace(/\D/g, '')}" style="flex:1;text-decoration:none;padding:10px;border-radius:10px;background:rgba(255,255,255,0.04);text-align:center;color:#fff;">
+          <img src="./imagens/call.png" alt="call">
+        </a>
+        <a class="map" href="https://www.google.com/maps/search/${encodeURIComponent(w.name + ' ' + w.address)}" target="_blank" style="flex:1;text-decoration:none;padding:10px;border-radius:10px;background:linear-gradient(90deg,#c00000,#ff2d2d);text-align:center;color:#fff;"> Ver no mapa </a>
+      </div>
+    `;
+    workshopGrid.appendChild(card);
+  });
+}
 
-workshops.forEach(w => {
-  const card = create('div');
-  card.className = 'card';
-
-  card.innerHTML = `
-    <div class="title">${w.name}</div>
-    <div class="desc">${w.address}</div>
-    <div class="muted">Especialidades: ${w.specialties.join(', ')}</div>
-
-    <div style="margin-top:10px;display:flex;gap:8px;">
-    
-      <a 
-        class="call"
-        href="tel:${w.phone.replace(/\D/g,'')}"
-        style="flex:1;text-decoration:none;padding:10px;border-radius:10px;background:rgba(255,255,255,0.04);text-align:center;color:#fff;;flex-direction: column;justify-items: center;">
-        <img src="./imagens/call.png">
-      </a>
-
-      <a
-        class="map"
-        href="https://www.google.com/maps/search/${encodeURIComponent(w.name + ' ' + w.address)}"
-        target="_blank"
-        style="flex:1;text-decoration:none;padding:10px;border-radius:10px;background:linear-gradient(90deg,#c00000,#ff2d2d);text-align:center;color:#fff;">
-        Ver no mapa
-      </a>
-    </div>
-  `;
-
-  workshopGrid.appendChild(card);
-});
-
-
-// =========================
-// MODAL
-// =========================
+// Modal
 const modal = el('modal');
 const modalTitle = el('modalTitle');
-const modalDesc  = el('modalDesc');
+const modalDesc = el('modalDesc');
 const modalExtra = el('modalExtra');
 
-el('modalClose').addEventListener('click', closeModal);
-
-modal.addEventListener('click', (e) => {
-  if (e.target === modal) closeModal();
-});
+if (el('modalClose')) el('modalClose').addEventListener('click', closeModal);
+if (modal) {
+  modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+}
 
 function openModal(title, desc, extra) {
-  modalTitle.textContent = title;
-  modalDesc.textContent = desc;
-  modalExtra.textContent = extra;
+  if (!modal) return;
+  if (modalTitle) modalTitle.textContent = title;
+  if (modalDesc) modalDesc.textContent = desc;
+  if (modalExtra) modalExtra.textContent = extra || '';
   modal.classList.remove('hidden');
 }
+function closeModal() { if (!modal) return; modal.classList.add('hidden'); }
 
-function closeModal() {
-  modal.classList.add('hidden');
-}
-
-
-// =========================
-// NAVEGAÇÃO SUAVE
-// =========================
+// Navegação suave
 document.querySelectorAll('.btn-main, .btn-outline, #heroWorkshops')
   .forEach(btn => {
     btn.addEventListener('click', (e) => {
-
-      const idMap = {
-        heroDiagnose: 'diagnose',
-        diagnoseBtn: 'diagnose',
-        heroWorkshops: 'workshops'
-      };
-
+      const idMap = { heroDiagnose: 'diagnose', diagnoseBtn: 'diagnose', heroWorkshops: 'workshops' };
       const mapId = idMap[e.target.id] || null;
       if (mapId) {
-        document.getElementById(mapId).scrollIntoView({
-          behavior:'smooth',
-          block:'start'
-        });
+        const target = document.getElementById(mapId);
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     });
   });
 
+// Botão sobre
+const aboutBtn = el('aboutBtn');
+if (aboutBtn) {
+  aboutBtn.addEventListener('click', () => {
+    alert('SOS Motors — Demo. Adicione informações reais na área administrativa.');
+  });
+}
 
-// =========================
-// BOTÃO SOBRE
-// =========================
-el('aboutBtn').addEventListener('click', () => {
-  alert('SOS Motors — Demo. Adicione informações reais na área administrativa.');
-});
-// =========================
-// SINTOMAS - QUICK SELECT
-// =========================
+// Sintomas
 const symptoms = [
   { name: 'Motor superaquecendo', desc: 'Verifique o líquido de arrefecimento e aguarde antes de dirigir.' },
   { name: 'Falha no ABS', desc: 'Sistema de freios com problemas. Dirija com cuidado e procure assistência.' },
@@ -182,51 +133,83 @@ const symptoms = [
 ];
 
 const symptomsGrid = el('symptoms-grid');
-
-symptoms.forEach(s => {
-  const btn = create('button');
-  btn.className = 'symptom-btn';
-  btn.textContent = s.name;
-
-  btn.addEventListener('click', () => {
-    openModal('Sintoma Selecionado', s.desc, '');
+if (symptomsGrid) {
+  symptoms.forEach(s => {
+    const btn = create('button');
+    btn.className = 'symptom-btn';
+    btn.textContent = s.name;
+    btn.addEventListener('click', () => { openModal('Sintoma Selecionado', s.desc, ''); });
+    symptomsGrid.appendChild(btn);
   });
+}
 
-  symptomsGrid.appendChild(btn);
-});
+// Emergência
+const emergencyBtnMobile = el('emergency-btn-mobile');
+if (emergencyBtnMobile) {
+  emergencyBtnMobile.addEventListener('click', () => {
+    openModal(
+      'Emergência!',
+      'Se você estiver em situação crítica, chame imediatamente o socorro ou leve o veículo para uma oficina segura.',
+      'Ligue: 192 / Consulte oficina mais próxima'
+    );
+  });
+}
 
-
-// =========================
-// EMERGÊNCIA
-// =========================
-const emergencyBtn = el('emergency-btn');
-
-emergencyBtn.addEventListener('click', () => {
-  openModal(
-    'Emergência!',
-    'Se você estiver em situação crítica, chame imediatamente o socorro ou leve o veículo para uma oficina segura.',
-    'Ligue: 192 / Consulte oficina mais próxima'
-  );
-});
-
-
-// =========================
-// AVALIAÇÕES / REVIEWS
-// =========================
-const reviews = [
-  { text: 'Excelente atendimento e rapidez no serviço!', author: 'João P.' },
-  { text: 'Profissionais competentes, solucionaram meu problema em tempo recorde.', author: 'Maria E.' },
-  { text: 'Recomendo a todos que precisam de diagnósticos confiáveis.', author: 'Carlos T.' }
-];
+// Avaliações
 
 const reviewsGrid = el('reviews-grid');
+if (reviewsGrid) {
+  reviews.forEach(r => {
+    const card = create('div');
+    card.className = 'review-card';
+    card.innerHTML = `<div class="review-text">${r.text}</div><div class="review-author">— ${r.author}</div>`;
+    reviewsGrid.appendChild(card);
+  });
+}
 
-reviews.forEach(r => {
-  const card = create('div');
-  card.className = 'review-card';
-  card.innerHTML = `
-    <div class="review-text">${r.text}</div>
-    <div class="review-author">— ${r.author}</div>
-  `;
-  reviewsGrid.appendChild(card);
+// Formulario de cadastro
+const salvarBtn = el('salvarBtn');
+if (salvarBtn) {
+  salvarBtn.addEventListener('click', () => {
+    const placa = el('placa') ? el('placa').value : '';
+    const nome = el('nome') ? el('nome').value : '';
+    const telefone = el('telefone') ? el('telefone').value : '';
+    const msgEl = el('cadastroMsg');
+    // não envia, os dados ficam apenas localmente
+    if (!placa || !nome || !telefone) {
+      if (msgEl) { msgEl.textContent = 'Preencha todos os campos antes de salvar.'; }
+      return;
+    }
+    if (msgEl) {
+      msgEl.textContent = `Dados salvos ${placa} — ${nome} — ${telefone}`;
+    }
+  });
+}
+
+
+// Mapa de imagem do painel
+document.querySelectorAll('area[data-symbol]').forEach(area => {
+  area.addEventListener('click', (e) => {
+    const id = area.getAttribute('data-symbol');
+    const found = symbols.find(s => s.id === id);
+    if (found) openModal(found.title, found.desc, `Gravidade: ${found.severity}`);
+  });
 });
+
+// Carregamento do JSON
+fetch('./json/painel.json')
+  .then(res => res.json())
+  .then(painel => {
+    document.querySelectorAll('area[data-symbol]').forEach(area => {
+      area.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const id = area.dataset.symbol;
+        const found = painel.find(item => item.id === id);
+        if (found) {
+          openModal(found.title, found.desc, `Gravidade: ${found.severity}`);
+        }
+      });
+    });
+  })
+  .catch(err => console.error("Erro ao carregar painel.json", err));

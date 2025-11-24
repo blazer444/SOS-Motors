@@ -1,0 +1,386 @@
+[
+    {
+        "id": "id_1",
+        "title": "1-farol-neblina",
+        "severity": "leve",
+        "desc": "Indica que os faróis de neblina dianteiros estão ativados. Utilize em situações de baixa visibilidade como chuva forte, neblina ou poeira."
+    },
+    {
+        "id": "id_2",
+        "title": "2-direcao-assistida",
+        "severity": "moderado",
+        "desc": "Sinaliza possível falha na direção assistida. O volante pode ficar mais pesado, exigindo maior esforço para manobras."
+    },
+    {
+        "id": "id_3",
+        "title": "3-farol-baixo",
+        "severity": "leve",
+        "desc": "Indica que os faróis baixos estão acesos. É obrigatório seu uso à noite e em túneis."
+    },
+    {
+        "id": "id_4",
+        "title": "4-pre-aquecimento-diesel",
+        "severity": "grave",
+        "desc": "Luz de pré-aquecimento das velas. Em motores diesel, indica preparo antes da partida. Se acender durante a condução, pode indicar falha."
+    },
+    {
+        "id": "id_5",
+        "title": "5-pastilha-freio",
+        "severity": "grave",
+        "desc": "Mostra desgaste nas pastilhas de freio. Recomenda-se troca imediata para evitar falha no sistema de frenagem."
+    },
+    {
+        "id": "id_6",
+        "title": "6-piloto-automatico",
+        "severity": "leve",
+        "desc": "Indica que o piloto automático está ativo. Ajusta a velocidade automaticamente durante a condução."
+    },
+    {
+        "id": "id_7",
+        "title": "7-setas-direcao",
+        "severity": "leve",
+        "desc": "Sinaliza que as setas de direção estão acionadas. Use para indicar conversões e mudanças de faixa."
+    },
+    {
+        "id": "id_8",
+        "title": "8-luz-torque",
+        "severity": "moderado",
+        "desc": "Aponta falha no controle de torque ou tração do veículo. Pode afetar o desempenho, especialmente em subidas."
+    },
+    {
+        "id": "id_9",
+        "title": "9-baixa-temperatura",
+        "severity": "leve",
+        "desc": "Temperatura externa muito baixa. Atenção a pistas escorregadias por gelo ou umidade."
+    },
+    {
+        "id": "id_10",
+        "title": "10-info",
+        "severity": "leve",
+        "desc": "Luz de informação geral. Pode sinalizar notificações ou mensagens no painel do veículo."
+    },
+    {
+        "id": "id_11",
+        "title": "11-vela-aquecedora",
+        "severity": "grave",
+        "desc": "Falha nas velas aquecedoras em veículos diesel. Pode dificultar a partida ou gerar falhas de combustão."
+    },
+    {
+        "id": "id_12",
+        "title": "12-pre-aquecimento",
+        "severity": "grave",
+        "desc": "Indica pré-aquecimento do sistema diesel. Se permanecer acesa em funcionamento, pode representar falha elétrica."
+    },
+    {
+        "id": "id_13",
+        "title": "13-falha-controle-estabilidade-esp-esc",
+        "severity": "grave",
+        "desc": "Falha no sistema de estabilidade (ESP/ESC). A dirigibilidade pode ficar comprometida em curvas ou pisos molhados."
+    },
+    {
+        "id": "id_14",
+        "title": "14-chave-nao-detectada",
+        "severity": "moderado",
+        "desc": "Indica que a chave eletrônica não foi identificada. Pode impedir a partida ou travamento."
+    },
+    {
+        "id": "id_15",
+        "title": "15-falha-no-sensor",
+        "severity": "moderado",
+        "desc": "Um dos sensores do veículo detectou falha. Pode afetar leitura de sistemas importantes."
+    },
+    {
+        "id": "id_16",
+        "title": "16-aviso-risco-estrada",
+        "severity": "leve",
+        "desc": "Alerta sobre risco na via, como gelo, chuva intensa ou condições adversas."
+    },
+    {
+        "id": "id_17",
+        "title": "17-nivel-baixo",
+        "severity": "moderado",
+        "desc": "Indica nível baixo de algum fluido importante. Verifique reservatórios conforme alerta no painel."
+    },
+    {
+        "id": "id_18",
+        "title": "18-pressao-oleo-baixa",
+        "severity": "crítico",
+        "desc": "Pressão de óleo muito baixa. Pare imediatamente para evitar danos graves ao motor."
+    },
+    {
+        "id": "id_19",
+        "title": "19-alternador-falha-carga",
+        "severity": "grave",
+        "desc": "Problema no alternador ou sistema de carga da bateria. Pode descarregar completamente durante o uso."
+    },
+    {
+        "id": "id_20",
+        "title": "20-farol-alto",
+        "severity": "leve",
+        "desc": "Indica que o farol alto está ligado. Use apenas quando não houver veículos vindo no sentido contrário."
+    },
+    {
+        "id": "id_21",
+        "title": "21-check-engine",
+        "severity": "grave",
+        "desc": "Falha no motor ou sistema de injeção. Pode causar perda de potência ou danos se ignorado."
+    },
+    {
+        "id": "id_22",
+        "title": "22-tpms",
+        "severity": "moderado",
+        "desc": "Pressão incorreta nos pneus. Pode afetar segurança, consumo e desgaste."
+    },
+    {
+        "id": "id_23",
+        "title": "23-falha-luzes-externas",
+        "severity": "moderado",
+        "desc": "Alguma luz externa está queimada ou falhando. Reduz a visibilidade e segurança."
+    },
+    {
+        "id": "id_24",
+        "title": "24-falha-ventilador-radiador",
+        "severity": "grave",
+        "desc": "O ventilador do radiador não está funcionando corretamente. Pode causar superaquecimento."
+    },
+    {
+        "id": "id_25",
+        "title": "25-dpf",
+        "severity": "grave",
+        "desc": "Filtro de partículas diesel entupido. Pode limitar desempenho e causar danos ao sistema."
+    },
+    {
+        "id": "id_26",
+        "title": "26-bico-injetor-problema",
+        "severity": "grave",
+        "desc": "Problema no bico injetor. Pode causar falhas de combustão e aumento no consumo."
+    },
+    {
+        "id": "id_27",
+        "title": "27-capo-aberto",
+        "severity": "leve",
+        "desc": "O capô está aberto ou mal fechado. Verifique antes de dirigir."
+    },
+    {
+        "id": "id_28",
+        "title": "28-assistente-faixa",
+        "severity": "leve",
+        "desc": "Assistente de faixa ativado ou alerta de desvio involuntário."
+    },
+    {
+        "id": "id_29",
+        "title": "29-catalisador-quente",
+        "severity": "grave",
+        "desc": "Temperatura excessiva no catalisador. Pode indicar falha no motor ou mistura inadequada."
+    },
+    {
+        "id": "id_30",
+        "title": "30-motorista-sem-cinto",
+        "severity": "grave",
+        "desc": "O cinto de segurança não está afivelado. Risco elevado em caso de colisão."
+    },
+    {
+        "id": "id_31",
+        "title": "31-freio-estacionamento",
+        "severity": "moderado",
+        "desc": "Freio de estacionamento acionado. Libere antes de continuar."
+    },
+    {
+        "id": "id_32",
+        "title": "32-bateria-fraca",
+        "severity": "grave",
+        "desc": "A bateria está fraca. O veículo pode não ligar ou apagar subitamente."
+    },
+    {
+        "id": "id_33",
+        "title": "33-sensor-estacionamento",
+        "severity": "leve",
+        "desc": "Sistema de estacionamento ativo. Auxilia em manobras."
+    },
+    {
+        "id": "id_34",
+        "title": "34-direcao-eletronica",
+        "severity": "grave",
+        "desc": "Falha na direção eletrônica. Pode comprometer o controle do veículo."
+    },
+    {
+        "id": "id_35",
+        "title": "35-farol-direcional-esquerdo",
+        "severity": "leve",
+        "desc": "Farol direcional esquerdo ativo. Auxilia na iluminação em curvas."
+    },
+    {
+        "id": "id_36",
+        "title": "36-farol-direcional-direito",
+        "severity": "leve",
+        "desc": "Farol direcional direito ativo. Melhora a visibilidade ao virar."
+    },
+    {
+        "id": "id_37",
+        "title": "37-reboque",
+        "severity": "leve",
+        "desc": "Modo reboque ativado. Ajusta o comportamento para tração adicional."
+    },
+    {
+        "id": "id_38",
+        "title": "38-hdc",
+        "severity": "moderado",
+        "desc": "Controle de descida ativo. Mantém velocidade reduzida em descidas íngremes."
+    },
+    {
+        "id": "id_39",
+        "title": "39-airbag-passageiro",
+        "severity": "grave",
+        "desc": "Airbag do passageiro desativado ou com falha. Segurança reduzida."
+    },
+    {
+        "id": "id_40",
+        "title": "40-falha-grave",
+        "severity": "crítico",
+        "desc": "Falha grave no veículo. Dirigir pode ser perigoso. Procure assistência imediatamente."
+    },
+    {
+        "id": "id_41",
+        "title": "41-combustivel-baixo",
+        "severity": "moderado",
+        "desc": "Nível baixo de combustível. Abasteça o quanto antes."
+    },
+    {
+        "id": "id_42",
+        "title": "42-agua-filtro-combustivel",
+        "severity": "grave",
+        "desc": "Água detectada no filtro de combustível (diesel). Risco de danos aos injetores."
+    },
+    {
+        "id": "id_43",
+        "title": "43-manutencao",
+        "severity": "moderado",
+        "desc": "O veículo requer manutenção. Pode ser revisão ou troca de algum componente."
+    },
+    {
+        "id": "id_44",
+        "title": "44-farois-automaticos",
+        "severity": "leve",
+        "desc": "Modo automático dos faróis ativado. Ajusta iluminação conforme a luz ambiente."
+    },
+    {
+        "id": "id_45",
+        "title": "45-sensor-chuva",
+        "severity": "leve",
+        "desc": "O limpador automático está ativo, ajustando a velocidade conforme a chuva."
+    },
+    {
+        "id": "id_46",
+        "title": "46-eco-mode",
+        "severity": "leve",
+        "desc": "Modo ECO ativado, otimizando o consumo de combustível."
+    },
+    {
+        "id": "id_47",
+        "title": "47-assistente-descida",
+        "severity": "moderado",
+        "desc": "Assistente de descida ativado. Auxilia em rampas íngremes mantendo controle."
+    },
+    {
+        "id": "id_48",
+        "title": "48-superaquecimento",
+        "severity": "crítico",
+        "desc": "O motor está superaquecendo. Pare imediatamente para evitar danos severos."
+    },
+    {
+        "id": "id_49",
+        "title": "49-abs-falha",
+        "severity": "grave",
+        "desc": "Falha no sistema ABS. Frenagens podem travar as rodas."
+    },
+    {
+        "id": "id_50",
+        "title": "50-filtro-ar",
+        "severity": "moderado",
+        "desc": "Problema no filtro de ar ou na admissão do motor. Pode reduzir desempenho."
+    },
+    {
+        "id": "id_51",
+        "title": "51-porta-dianteira-aberta",
+        "severity": "leve",
+        "desc": "Indica que uma porta dianteira está aberta ou mal fechada."
+    },
+    {
+        "id": "id_52",
+        "title": "52-travamento-central",
+        "severity": "leve",
+        "desc": "As portas estão travadas eletronicamente."
+    },
+    {
+        "id": "id_53",
+        "title": "53-tracao-4x4",
+        "severity": "leve",
+        "desc": "A tração integral está ativada, melhorando aderência em terrenos difíceis."
+    },
+    {
+        "id": "id_54",
+        "title": "54-motor-eletrico-falha",
+        "severity": "grave",
+        "desc": "Problema no motor elétrico ou sistema híbrido. Pode limitar a condução."
+    },
+    {
+        "id": "id_55",
+        "title": "55-filtro-combustivel-entupido",
+        "severity": "grave",
+        "desc": "Filtro de combustível obstruído. Pode causar falhas e perda de potência."
+    },
+    {
+        "id": "id_56",
+        "title": "56-airbag-lateral",
+        "severity": "grave",
+        "desc": "Falha no airbag lateral. Proteção reduzida em colisões."
+    },
+    {
+        "id": "id_57",
+        "title": "57-baixo-nivel-oleo-motor",
+        "severity": "grave",
+        "desc": "Nível de óleo do motor muito baixo. Complete imediatamente para evitar danos."
+    },
+    {
+        "id": "id_58",
+        "title": "58-desembacador-traseiro",
+        "severity": "leve",
+        "desc": "Desembaçador traseiro ativado. Remove umidade do vidro."
+    },
+    {
+        "id": "id_59",
+        "title": "59-porta-mala-aberta",
+        "severity": "leve",
+        "desc": "O porta-malas está aberto ou mal fechado. Verifique antes de dirigir."
+    },
+    {
+        "id": "id_60",
+        "title": "60-controle-estabilidade-atuando",
+        "severity": "moderado",
+        "desc": "O controle de estabilidade está atuando para evitar perda de tração."
+    },
+    {
+        "id": "id_61",
+        "title": "61-limpador-para-brisa",
+        "severity": "leve",
+        "desc": "Limpador de para-brisa em operação."
+    },
+    {
+        "id": "id_62",
+        "title": "62-check-engine-repetido",
+        "severity": "grave",
+        "desc": "Luz de falha no motor acesa novamente. Indica problema persistente no sistema."
+    },
+    {
+        "id": "id_63",
+        "title": "63-desembacador-dianteiro",
+        "severity": "leve",
+        "desc": "Desembaçador dianteiro ativado para remover vapor do para-brisa."
+    },
+    {
+        "id": "id_64",
+        "title": "64-limpador-automatico",
+        "severity": "leve",
+        "desc": "Modo automático do limpador ativado. Ajusta a frequência conforme a chuva."
+    }
+]

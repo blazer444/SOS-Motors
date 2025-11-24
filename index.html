@@ -1,251 +1,194 @@
 <!doctype html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>SOS Motors — Diagnóstico Premium</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./style.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>SOS Motors — Diagnóstico Premium</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css" />
 </head>
 
-<!-- BOTÃO FLUTUANTE EMERGÊNCIA (NOVO) -->
-<a id="emergencyBtn" class="floating emergency" href="https://wa.me/5516999999999" title="Emergência">
-  🚨 
+<a id="emergencyBtn" class="floating emergency" href="https://wa.me/5516999999999" title="Emergência"> 🚨 </a>
 </a>
-<!-- BOTÃO FLUTUANTE WHATSAPP (NOVO) -->
-<a id="waBtn" class="floating whatsapp" href="https://wa.me/5516999999999" target="_blank" title="WhatsApp">
-  <img src="./imagens/iconswhatsapp.png">
-</a>
-
 
 <body>
-
-  <!-- HEADER -->
-  <header class="header">
-
-    <div class="logo-area">
-      <div class="logo-icon">
-        <img src="./imagens/Logo_SOSmotores_1_-removebg-preview.png" alt="SOS Motors">
-      </div>
-
-      <div class="logo-text">
-        <h1>SOS Motors</h1>
-        <p>Diagnóstico rápido · Oficinas premium · Franca - SP</p>
-      </div>
-    </div>
-
-    <nav class="nav">
-      <button class="btn-outline" id="aboutBtn">Sobre</button>
-      <button class="btn-outline" id="useLocationBtn">Usar minha localização</button>
-      <button class="btn-main" id="diagnoseBtn">Diagnosticar</button>
-    </nav>
-
-  </header>
-
-  <!-- TRUST SECTION (NOVO) -->
-<section id="trust" class="section">
-  <h3>Por que confiar na SOS Motors</h3>
-
-  <div class="symbols-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
-    <div class="card">
-      <div class="title">Selo de Qualidade</div>
-      <div class="desc">Oficinas verificadas e aprovadas em atendimento.</div>
-    </div>
-
-    <div class="card">
-      <div class="title">Equipe Certificada</div>
-      <div class="desc">Especialistas em diagnóstico eletrônico e elétrica automotiva.</div>
-    </div>
-
-    <div class="card">
-      <div class="title">Depoimentos</div>
-      <div class="desc">"Me ajudaram em 10 minutos!" — Cliente real</div>
-    </div>
-  </div>
-</section>
-
-
-  <!-- MAIN -->
-  <main>
-
-    <!-- HERO SECTION -->
-    <section class="hero">
-
-      <div class="hero-text">
-        <h2 id="problema">Identifique o problema antes que ele te pare</h2>
-        <p>Soluções rápidas, diagnóstico inteligente e uma rede de oficinas premium.</p>
-
-        <div class="hero-buttons">
-          <button class="btn-main" id="heroDiagnose">Diagnosticar agora</button>
-          <button class="btn-outline" id="heroWorkshops">Ver oficinas</button>
+    <header class="header">
+        <div class="logo-area">
+            <div class="logo-icon">
+                <img src="./imagens/Logo_SOSmotores_1_-removebg-preview.png" alt="SOS Motors">
+            </div>
+            <div class="logo-text">
+                <h1>SOS Motors</h1>
+                <p>Diagnóstico rápido · Oficinas premium · Franca - SP</p>
+            </div>
         </div>
 
-        <div class="stats">
-          <div class="stat">
-            <div class="stat-title">Tempo médio</div>
-            <div class="stat-value">15 min</div>
-            <div class="stat-sub">para diagnóstico inicial</div>
-          </div>
+        <nav class="nav">
+            <a class="btn-outline" href="./index.html">Início</a>
+            <a class="btn-outline" href="./sobre.html">Sobre</a>
+            <a class="btn-outline" href="./painel.html">Painel</a>
+            <a class="btn-outline" href="./cadastro.html">Cadastrar placa</a>
+            <a class="btn-outline" href="./mecanicos.html">Mecânicos</a>
+            <button class="btn-main" id="diagnoseBtn">Diagnosticar</button>
+        </nav>
+    </header>
 
-          <div class="stat">
-            <div class="stat-title">Oficinas</div>
-            <div class="stat-value">+30</div>
-            <div class="stat-sub">em Franca e região</div>
-          </div>
-
-          <div class="stat">
-            <div class="stat-title">Confiança</div>
-            <div class="stat-value">Certificada</div>
-            <div class="stat-sub">avaliada por usuários</div>
-          </div>
+    <section id="trust" class="section">
+        <h3>Por que confiar na SOS Motors</h3>
+        <div class="symbols-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
+            <div class="card">
+                <div class="title">Selo de Qualidade</div>
+                <div class="desc">Oficinas verificadas e aprovadas em atendimento.</div>
+            </div>
+            <div class="card">
+                <div class="title">Equipe Certificada</div>
+                <div class="desc">Especialistas em diagnóstico eletrônico e elétrica automotiva.</div>
+            </div>
+            <div class="card">
+                <div class="title">Depoimentos</div>
+                <div class="desc">Me ajudaram em 10 minutos!</div>
+            </div>
         </div>
-      </div>
-
-      <!-- DASHBOARD VISUAL -->
-      <div class="hero-dashboard" id="dashboard" aria-hidden="true">
-
-        <div class="dash-top">
-          <div>
-            <div class="small-label">Velocidade</div>
-            <div class="big-value">88 km/h</div>
-          </div>
-
-          <div>
-            <div class="small-label">RPM</div>
-            <div class="big-value">3.2k</div>
-          </div>
-        </div>
-
-        <div class="dash-cards" id="dashSymbols">
-          <!-- preenchido pelo JS -->
-        </div>
-
-        <div class="dash-footer">
-          <div class="dash-pill">SOS - Atendimento rápido</div>
-          <div class="dash-pill pill-outline">Agende visita</div>
-        </div>
-
-      </div>
-
     </section>
 
-    <!-- DIAGNOSE SECTION -->
-    <section id="diagnose" class="section">
-      <h3>Galeria de sinais do painel</h3>
-      <p class="muted">Clique em um símbolo para ver explicação detalhada, gravidade e passos imediatos.</p>
-      <div id="symbols" class="symbols-grid"></div>
-    </section>
+    <main>
+        <section class="hero">
+            <div class="hero-text">
+                <h2 id="problema">Identifique o problema antes que ele te pare</h2>
+                <p>Soluções rápidas, diagnóstico inteligente e uma rede de oficinas premium.</p>
 
-    <!-- WORKSHOPS SECTION -->
-    <section id="workshops" class="section">
-      <h3>Oficinas e mecânicos — Franca, SP</h3>
-      <p class="muted">Oficinas selecionadas com avaliações e especialidades.</p>
-      <div id="workshop-list" class="workshops-grid"></div>
-    </section>
-  </main>
+                <div class="hero-buttons">
+                    <button class="btn-main" id="heroDiagnose">Diagnosticar agora</button>
+                    <button class="btn-outline" id="heroWorkshops">Ver oficinas</button>
+                </div>
 
-      <!-- QUICK SYMPTOMS SECTION -->
-    <section id="symptoms" class="section">
-      <h3>O que o seu carro está fazendo?</h3>
-      <p class="muted">Selecione um sintoma comum e veja causas prováveis e o que fazer agora.</p>
+                <div class="stats">
+                    <div class="stat">
+                        <div class="stat-title">Tempo médio</div>
+                        <div class="stat-value">15 min</div>
+                        <div class="stat-sub">para diagnóstico inicial</div>
+                    </div>
 
-      <div class="symptoms-grid">
-        <button class="symptom-btn" data-symptom="batendo">
-          Barulho batendo na frente
-        </button>
+                    <div class="stat">
+                        <div class="stat-title">Oficinas</div>
+                        <div class="stat-value">+30</div>
+                        <div class="stat-sub">em Franca e região</div>
+                    </div>
 
-        <button class="symptom-btn" data-symptom="falhando">
-          Motor falhando / perda de força
-        </button>
+                    <div class="stat">
+                        <div class="stat-title">Confiança</div>
+                        <div class="stat-value">Certificada</div>
+                        <div class="stat-sub">avaliada por usuários</div>
+                    </div>
+                </div>
+            </div>
 
-        <button class="symptom-btn" data-symptom="luzinjet">
-          Luz da injeção acesa
-        </button>
+            <div class="hero-dashboard" id="dashboard" aria-hidden="true">
+                <div class="dash-top">
+                    <div>
+                        <div class="small-label">Velocidade</div>
+                        <div class="big-value">88 km/h</div>
+                    </div>
+                    <div>
+                        <div class="small-label">RPM</div>
+                        <div class="big-value">3.2k</div>
+                    </div>
+                </div>
 
-        <button class="symptom-btn" data-symptom="fervendo">
-          Carro esquentando / fervendo
-        </button>
+                <div class="dash-cards" id="dashSymbols">
+                </div>
 
-        <button class="symptom-btn" data-symptom="vibrando">
-          Vibração no volante
-        </button>
+                <div class="dash-footer">
+                    <div class="dash-pill">SOS - Atendimento rápido</div>
+                </div>
+            </div>
+        </section>
 
-        <button class="symptom-btn" data-symptom="rangendo">
-          Freio rangendo
-        </button>
-      </div>
-    </section>
+        <section id="symptoms" class="section">
+            <h3>O que o seu carro está fazendo?</h3>
+            <p class="muted">Selecione um sintoma comum e veja causas prováveis e o que fazer agora.</p>
+            <div id="symptoms-grid" class="symptoms-grid">
+                <button class="symptom-btn" data-symptom="batendo"> Barulho batendo na frente </button>
+                <button class="symptom-btn" data-symptom="falhando"> Motor falhando / perda de força </button>
+                <button class="symptom-btn" data-symptom="luzinjet"> Luz da injeção acesa </button>
+                <button class="symptom-btn" data-symptom="fervendo"> Carro esquentando / fervendo </button>
+                <button class="symptom-btn" data-symptom="vibrando"> Vibração no volante </button>
+                <button class="symptom-btn" data-symptom="rangendo"> Freio rangendo </button>
+            </div>
+        </section>
 
+        <section id="diagnose" class="section">
+            <h3>Galeria de sinais do painel</h3>
+            <p class="muted">Clique em um símbolo para ver explicação detalhada, gravidade e passos imediatos.</p>
+            <div id="symbols" class="symbols-grid"></div>
+        </section>
 
-    <!-- EMERGENCY CTA SECTION -->
+        <section id="workshops" class="section">
+            <h3>Oficinas e mecânicos — Franca, SP</h3>
+            <p class="muted">Oficinas selecionadas com avaliações e especialidades.</p>
+            <div id="workshop-list" class="workshops-grid"></div>
+        </section>
+    </main>
+
     <section id="emergency" class="section emergency-section">
-      <h3>Precisa de ajuda agora?</h3>
-      <p class="muted">Se o carro não está seguro para rodar, não arrisque.</p>
-
-      <button class="btn-main emergency-btn" id="emergencyBtn">
-        Chamar suporte imediato
-      </button>
+        <h3>Precisa de ajuda agora?</h3>
+        <p class="muted">Se o carro não está seguro para rodar, não arrisque.</p>
+        <button class="btn-main emergency-btn" id="emergency-btn-mobile"> Chamar suporte imediato </button>
     </section>
 
-
-    <!-- REVIEWS SECTION -->
     <section id="reviews" class="section">
-      <h3>O que os motoristas dizem</h3>
-
-      <div class="reviews-grid">
-
-        <div class="review-card">
-          <p class="review-text">
-            "Achei que ia gastar uma fortuna, mas o diagnóstico mostrou que era só a bobina. Salvou meu dia!"
-          </p>
-          <div class="review-author">— Camila, Honda Civic</div>
+        <h3>O que os motoristas dizem</h3>
+        <div class="reviews-grid" id="reviews-grid">
+            <div class="review-card">
+                <p class="review-text"> "Achei que ia gastar uma fortuna, mas o diagnóstico mostrou que era só a bobina.
+                    Salvou meu dia!" </p>
+                <div class="review-author">— Cauã Carrijo, Ferrari Spider</div>
+            </div>
+            <div class="review-card">
+                <p class="review-text"> "Me ajudou a entender a gravidade do problema antes de levar para a oficina.
+                    Excelente." </p>
+                <div class="review-author">— Eduardo, Ducati Monster</div>
+            </div>
+            <div class="review-card">
+                <p class="review-text"> "Processo Rápido e Atendimento 100% impecável." </p>
+                <div class="review-author">— João Pedro, Ford F250</div>
+            </div>
+            <div class="review-card">
+                <p class="review-text"> "Solucionou meu problema ao encontrar o mecânico rapidamente." </p>
+                <div class="review-author">— Maria Eduarda, Mini Cooper</div>
+            </div>
+            <div class="review-card">
+                <p class="review-text"> "Conseguiu me ajudar a descobrir o erro indicado do meu painel." </p>
+                <div class="review-author">— Ronie Corinto, McLaren 720s Coupe</div>
+            </div>
         </div>
-
-        <div class="review-card">
-          <p class="review-text">
-            "Me ajudou a entender a gravidade do problema antes de levar para a oficina. Excelente."
-          </p>
-          <div class="review-author">— Rodrigo, Onix</div>
-        </div>
-
-        <div class="review-card">
-          <p class="review-text">
-            "Indiquei pra minha mãe. Rápido, claro e confiável."
-          </p>
-          <div class="review-author">— Bianca, Creta</div>
-        </div>
-
-      </div>
     </section>
 
+    <footer>
+        <div class="footer-inner">
+            <div>
+                <strong>SOS Motors</strong>
+                <div class="muted">Diagnóstico inteligente e rede de oficinas premium.</div>
+            </div>
+            <div class="footer-right"> © <span id="year"></span> SOS Motors </div>
+        </div>
+    </footer>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-inner">
-      <div>
-        <strong>SOS Motors</strong>
-        <div class="muted">Diagnóstico inteligente e rede de oficinas premium.</div>
-      </div>
-
-      <div class="footer-right">
-        © <span id="year"></span> SOS Motors
-      </div>
+    <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+        <div class="modal-card">
+            <button class="modal-close" id="modalClose" aria-label="Fechar">✕</button>
+            <h4 id="modalTitle"></h4>
+            <p id="modalDesc"></p>
+            <div id="modalExtra" class="muted"></div>
+            <div id="modalActions" class="modal-actions"></div>
+        </div>
     </div>
-  </footer>
-
-  <!-- MODAL -->
-  <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
-    <div class="modal-card">
-      <button class="modal-close" id="modalClose" aria-label="Fechar">✕</button>
-      <h4 id="modalTitle"></h4>
-      <p id="modalDesc"></p>
-      <div id="modalExtra" class="muted"></div>
-      <div id="modalActions" class="modal-actions"></div>
-    </div>
-  </div>
-
-  <!-- SCRIPTS -->
-  <script src="./app.js"></script>
-
+    
+    <script src="./app.js"></script>
 </body>
 </html>

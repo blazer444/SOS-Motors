@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Mecânicos — SOS Motors</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo-area">
+            <div class="logo-icon">
+                <img src="./imagens/Logo_SOSmotores_1_-removebg-preview.png" alt="SOS Motors">
+            </div>
+            <div class="logo-text">
+                <h1>SOS Motors</h1>
+                <p>Diagnóstico rápido · Oficinas premium · Franca - SP</p>
+            </div>
+        </div>
+
+        <nav class="nav">
+            <a class="btn-outline" href="./index.html">Início</a>
+            <a class="btn-outline" href="./sobre.html">Sobre</a>
+            <a class="btn-outline" href="./painel.html">Painel</a>
+            <a class="btn-outline" href="./cadastro.html">Cadastrar placa</a>
+            <a class="btn-outline" href="./mecanicos.html">Mecânicos</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section">
+            <h2>Mecânicos próximos</h2>
+            <p class="muted">Mapa com mecânicos e oficinas próximas. Clique para abrir no Google Maps.</p>
+
+            <div class="card">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d13660.62179611469!2d-47.40448313332785!3d-20.537422775626034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1zbWVjw6JuaWNvcyBwcsOzeGltb3M!5e1!3m2!1spt-BR!2sbr!4v1763929604318!5m2!1spt-BR!2sbr" width="100%" height="520" style="border:0;" allowfullscreen="" loading="lazy"referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                <div style="margin-top:10px;">
+                    <a class="btn-main" href="https://www.google.com/maps/search/mecânicos+próximos"
+                        target="_blank">Abrir no Google Maps</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div>
+                <strong>SOS Motors</strong>
+                <div class="muted">Diagnóstico inteligente e rede de oficinas premium.</div>
+            </div>
+            <div class="footer-right"> © <span id="year"></span> SOS Motors </div>
+        </div>
+    </footer>
+
+    <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+        <div class="modal-card">
+            <button class="modal-close" id="modalClose" aria-label="Fechar">✕</button>
+            <h4 id="modalTitle"></h4>
+            <p id="modalDesc"></p>
+            <div id="modalExtra" class="muted"></div>
+            <div id="modalActions" class="modal-actions"></div>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
