@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Cadastro — SOS Motors</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo-area">
+            <div class="logo-icon">
+                <img src="./imagens/Logo_SOSmotores_1_-removebg-preview.png" alt="SOS Motors">
+            </div>
+            <div class="logo-text">
+                <h1>SOS Motors</h1>
+                <p>Diagnóstico rápido · Oficinas premium · Franca - SP</p>
+            </div>
+        </div>
+
+        <nav class="nav">
+            <a class="btn-outline" href="./index.html">Início</a>
+            <a class="btn-outline" href="./sobre.html">Sobre</a>
+            <a class="btn-outline" href="./painel.html">Painel</a>
+            <a class="btn-outline" href="./cadastro.html">Cadastrar placa</a>
+            <a class="btn-outline" href="./mecanicos.html">Mecânicos</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section">
+            <h2>Cadastro de veículo</h2>
+            <p class="muted">Preencha os dados abaixo.</p>
+
+            <div class="card">
+                <form id="cadastroForm" onsubmit="return false;">
+                    <label for="placa">Placa</label><br>
+                    <input id="placa" name="placa" type="text" placeholder="AAA0A00" required
+                        style="width:100%;padding:10px;border-radius:8px;margin-top:6px;"><br><br>
+
+                    <label for="nome">Nome</label><br>
+                    <input id="nome" name="nome" type="text" placeholder="Seu nome" required
+                        style="width:100%;padding:10px;border-radius:8px;margin-top:6px;"><br><br>
+
+                    <label for="telefone">Telefone</label><br>
+                    <input id="telefone" name="telefone" type="tel" placeholder="(16) 9 9999-9999" required
+                        style="width:100%;padding:10px;border-radius:8px;margin-top:6px;"><br><br>
+
+                    <div style="display:flex;gap:8px;">
+                        <button class="btn-main" id="salvarBtn" type="button">Salvar</button>
+                        <button class="btn-outline" type="reset">Limpar</button>
+                    </div>
+
+                    <p class="muted" id="cadastroMsg" style="margin-top:12px;"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div>
+                <strong>SOS Motors</strong>
+                <div class="muted">Diagnóstico inteligente e rede de oficinas premium.</div>
+            </div>
+            <div class="footer-right"> © <span id="year"></span> SOS Motors </div>
+        </div>
+    </footer>
+
+    <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+        <div class="modal-card">
+            <button class="modal-close" id="modalClose" aria-label="Fechar">✕</button>
+            <h4 id="modalTitle"></h4>
+            <p id="modalDesc"></p>
+            <div id="modalExtra" class="muted"></div>
+            <div id="modalActions" class="modal-actions"></div>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
