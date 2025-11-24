@@ -541,23 +541,21 @@ footer {
   box-shadow: 0 10px 30px rgba(255,0,0,0.5);
 }
 
-/* Botão WhatsApp */
-.floating.whatsapp {
-  background: #25d366;
-  color: #fff;
-  right: 90px;
-}
 
-.floating.whatsapp:hover {
-  transform: scale(1.1);
-  box-shadow: 0 10px 30px rgba(37,211,102,0.5);
-}
 
 /* Botão hamburguer header*/
+
+#botoesheader {
+  display: flex;
+  align-items: center;
+  gap: 30px;      
+}
+
 
 .menu-toggle {
   position: relative;         
   display: flex;
+  left: 10%;
   align-items: center;
   justify-content: center;
   z-index: 1200;
@@ -614,3 +612,4 @@ footer {
 @media (max-width: 420px) {
   .dropdown { width: 180px; right: 0; left: auto; }
 }
+

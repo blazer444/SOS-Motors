@@ -27,6 +27,7 @@
             </div>
         </div>
 
+<div id="botoesheader">
 <div class="menu-toggle" id="menu-toggle" aria-haspopup="true" aria-expanded="false">
     <button class="hamburger" id="hamburger" aria-label="Abrir menu">☰</button>
         <nav class="dropdown" id="dropdown" aria-label="Menu principal">
@@ -36,10 +37,13 @@
                 <li><a class="btn-outline" href="./painel.html">Painel</a></li>
                 <li><a class="btn-outline" href="./cadastro.html">Cadastrar placa</a></li>
                 <li><a class="btn-outline" href="./mecanicos.html">Mecânicos</a></li>
-                <li><button class="btn-main" id="diagnoseBtn">Diagnosticar</button></li>
             </ul>
     </nav>
 </div>
+
+<div class="diagnosticar"><button class="btn-main" id="diagnoseBtn">Diagnosticar</button></div>
+</div>
+
 
     </header>
 
@@ -118,12 +122,7 @@
             <h3>O que o seu carro está fazendo?</h3>
             <p class="muted">Selecione um sintoma comum e veja causas prováveis e o que fazer agora.</p>
             <div id="symptoms-grid" class="symptoms-grid">
-                <button class="symptom-btn" data-symptom="batendo"> Barulho batendo na frente </button>
-                <button class="symptom-btn" data-symptom="falhando"> Motor falhando / perda de força </button>
-                <button class="symptom-btn" data-symptom="luzinjet"> Luz da injeção acesa </button>
-                <button class="symptom-btn" data-symptom="fervendo"> Carro esquentando / fervendo </button>
-                <button class="symptom-btn" data-symptom="vibrando"> Vibração no volante </button>
-                <button class="symptom-btn" data-symptom="rangendo"> Freio rangendo </button>
+                
             </div>
         </section>
 
@@ -142,7 +141,7 @@
 
     <section id="emergency" class="section emergency-section">
         <h3>Precisa de ajuda agora?</h3>
-        <p class="muted">Se o carro não está seguro para rodar, não arrisque.</p>
+        <p class="muted">Se o carro não está seguro para rodar, não arrisque!</p>
         <button class="btn-main emergency-btn" id="emergency-btn-mobile"> Chamar suporte imediato </button>
     </section>
 
