@@ -129,7 +129,13 @@ const symptoms = [
   { name: 'Motor superaquecendo', desc: 'Verifique o líquido de arrefecimento e aguarde antes de dirigir.' },
   { name: 'Falha no ABS', desc: 'Sistema de freios com problemas. Dirija com cuidado e procure assistência.' },
   { name: 'Bateria fraca', desc: 'Pode deixar o carro sem energia elétrica. Cheque o alternador/bateria.' },
-  { name: 'Airbag', desc: 'Problema no sistema de airbags — segurança comprometida.' }
+  { name: 'Airbag', desc: 'Problema no sistema de airbags — segurança comprometida.' },
+  { name: 'Barulho batendo na frente', desc: 'Pode ser suspensão, pivôs, coxins ou algo solto na dianteira.' },
+  { name: 'Motor falhando / perda de força', desc: 'Pode indicar problema na ignição, combustível ou injeção eletrônica.' },
+  { name: 'Luz da injeção acesa', desc: 'A ECU detectou falha no sistema. Recomendado diagnóstico com scanner.' },
+  { name: 'Carro esquentando / fervendo', desc: 'Verifique o líquido de arrefecimento e pare o veículo para evitar danos.' },
+  { name: 'Vibração no volante', desc: 'Pode ser desalinhamento, balanceamento ou folga na suspensão/direção.' },
+  { name: 'Freio rangendo', desc: 'Pode indicar pastilhas gastas ou sujeira entre pastilha e disco.' }
 ];
 
 const symptomsGrid = el('symptoms-grid');
