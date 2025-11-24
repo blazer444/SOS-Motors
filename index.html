@@ -27,14 +27,20 @@
             </div>
         </div>
 
-        <nav class="nav">
-            <a class="btn-outline" href="./index.html">Início</a>
-            <a class="btn-outline" href="./sobre.html">Sobre</a>
-            <a class="btn-outline" href="./painel.html">Painel</a>
-            <a class="btn-outline" href="./cadastro.html">Cadastrar placa</a>
-            <a class="btn-outline" href="./mecanicos.html">Mecânicos</a>
-            <button class="btn-main" id="diagnoseBtn">Diagnosticar</button>
-        </nav>
+<div class="menu-toggle" id="menu-toggle" aria-haspopup="true" aria-expanded="false">
+    <button class="hamburger" id="hamburger" aria-label="Abrir menu">☰</button>
+        <nav class="dropdown" id="dropdown" aria-label="Menu principal">
+            <ul>
+                <li><a class="btn-outline" href="./index.html">Início</a></li>
+                <li><a class="btn-outline" href="./sobre.html">Sobre</a></li>
+                <li><a class="btn-outline" href="./painel.html">Painel</a></li>
+                <li><a class="btn-outline" href="./cadastro.html">Cadastrar placa</a></li>
+                <li><a class="btn-outline" href="./mecanicos.html">Mecânicos</a></li>
+                <li><button class="btn-main" id="diagnoseBtn">Diagnosticar</button></li>
+            </ul>
+    </nav>
+</div>
+
     </header>
 
     <section id="trust" class="section">
