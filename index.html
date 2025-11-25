@@ -28,20 +28,22 @@
         </div>
 
 <div id="botoesheader">
-<div class="menu-toggle" id="menu-toggle" aria-haspopup="true" aria-expanded="false">
-    <button class="hamburger" id="hamburger" aria-label="Abrir menu">☰</button>
-        <nav class="dropdown" id="dropdown" aria-label="Menu principal">
-            <ul>
-                <li><a class="btn-outline" href="./index.html">Início</a></li>
-                <li><a class="btn-outline" href="./sobre.html">Sobre</a></li>
-                <li><a class="btn-outline" href="./painel.html">Painel</a></li>
-                <li><a class="btn-outline" href="./cadastro.html">Cadastrar placa</a></li>
-                <li><a class="btn-outline" href="./mecanicos.html">Mecânicos</a></li>
-            </ul>
-    </nav>
-</div>
+    <div class="menu-toggle" id="menu-toggle" aria-haspopup="true" aria-expanded="false">
+        <button class="hamburger" id="hamburger" aria-label="Abrir menu">☰</button>
+            <nav class="dropdown" id="dropdown" aria-label="Menu principal">
+                <ul>
+                    <li><a class="btn-outline" href="./index.html">Início</a></li>
+                    <li><a class="btn-outline" href="./sobre.html">Sobre</a></li>
+                    <li><a class="btn-outline" href="./painel.html">Painel</a></li>
+                    <li><a class="btn-outline" href="./cadastro.html">Cadastrar placa</a></li>
+                    <li><a class="btn-outline" href="./mecanicos.html">Mecânicos</a></li>
+                </ul>
+        </nav>
+    </div>
 
-<div class="diagnosticar"><button class="btn-main" id="diagnoseBtn">Diagnosticar</button></div>
+    <div class="diagnosticar">
+        <button class="btn-main" id="diagnoseBtn">Diagnosticar</button>
+    </div>
 </div>
 
 
@@ -54,7 +56,7 @@
                 <p>Soluções rápidas, diagnóstico inteligente e uma rede de oficinas premium.</p>
 
                 <div class="hero-buttons">
-                    <button class="btn-main" id="heroDiagnose">Diagnosticar agora</button>
+                    <button class="btn-main" id="heroDiagnose">Prováveis Causas</button>
                     <button class="btn-outline" id="heroWorkshops">Ver oficinas</button>
                 </div>
 
@@ -101,25 +103,12 @@
         </section>
 
         <section id="symptoms" class="section">
-            <h3>O que o seu carro está fazendo?</h3>
+            <h3 id="symptomstitle">O que o seu carro está fazendo?</h3>
             <p class="muted">Selecione um sintoma comum e veja causas prováveis e o que fazer agora.</p>
             <div id="symptoms-grid" class="symptoms-grid">
                 
             </div>
         </section>
-
-        <section id="diagnose" class="section">
-            <h3>Galeria de sinais do painel</h3>
-            <p class="muted">Clique em um símbolo para ver explicação detalhada, gravidade e passos imediatos.</p>
-            <div id="symbols" class="symbols-grid"></div>
-        </section>
-
-        <section id="workshops" class="section">
-            <h3>Oficinas e mecânicos — Franca, SP</h3>
-            <p class="muted">Oficinas selecionadas com avaliações e especialidades.</p>
-            <div id="workshop-list" class="workshops-grid"></div>
-        </section>
-    </main>
 
     <section id="emergency" class="section emergency-section">
         <h3>Precisa de ajuda agora?</h3>
@@ -154,6 +143,7 @@
             </div>
         </div>
     </section>
+</main>
 
     <footer>
         <div class="footer-inner">

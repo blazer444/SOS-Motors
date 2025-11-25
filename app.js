@@ -103,27 +103,6 @@ function openModal(title, desc, extra) {
 }
 function closeModal() { if (!modal) return; modal.classList.add('hidden'); }
 
-// Navegação suave
-document.querySelectorAll('.btn-main, .btn-outline, #heroWorkshops')
-  .forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      const idMap = { heroDiagnose: 'diagnose', diagnoseBtn: 'diagnose', heroWorkshops: 'workshops' };
-      const mapId = idMap[e.target.id] || null;
-      if (mapId) {
-        const target = document.getElementById(mapId);
-        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    });
-  });
-
-// Botão sobre
-const aboutBtn = el('aboutBtn');
-if (aboutBtn) {
-  aboutBtn.addEventListener('click', () => {
-    alert('SOS Motors — Demo. Adicione informações reais na área administrativa.');
-  });
-}
-
 // Sintomas
 const symptoms = [
   { name: 'Motor superaquecendo', desc: 'Verifique o líquido de arrefecimento e aguarde antes de dirigir.' },
@@ -158,18 +137,6 @@ if (emergencyBtnMobile) {
       'Se você estiver em situação crítica, chame imediatamente o socorro ou leve o veículo para uma oficina segura.',
       'Ligue: 192 / Consulte oficina mais próxima'
     );
-  });
-}
-
-// Avaliações
-
-const reviewsGrid = el('reviews-grid');
-if (reviewsGrid) {
-  reviews.forEach(r => {
-    const card = create('div');
-    card.className = 'review-card';
-    card.innerHTML = `<div class="review-text">${r.text}</div><div class="review-author">— ${r.author}</div>`;
-    reviewsGrid.appendChild(card);
   });
 }
 
@@ -219,3 +186,23 @@ fetch('./json/painel.json')
     });
   })
   .catch(err => console.error("Erro ao carregar painel.json", err));
+
+  // botões diagnosticar e ver oficinas
+
+  document.getElementById('diagnoseBtn').addEventListener('click', () => {
+    window.location.href = './mecanicos.html';
+});
+
+  document.getElementById('heroWorkshops').addEventListener('click', () => {
+    window.location.href = './mecanicos.html';
+});
+
+// função de rolar do botão Prováveis Causas
+
+document.getElementById('heroDiagnose').addEventListener('click', () => {
+  const target = document.getElementById('symptoms');
+  target.scrollIntoView({ behavior: 'smooth' });
+});
+
+
+
