@@ -190,7 +190,7 @@ fetch('./json/painel.json')
   // botões diagnosticar e ver oficinas
 
   document.getElementById('diagnoseBtn').addEventListener('click', () => {
-    window.location.href = './mecanicos.html';
+    window.location.href = './painel.html';
 });
 
   document.getElementById('heroWorkshops').addEventListener('click', () => {
