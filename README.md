@@ -20,7 +20,7 @@ https://sos-motors.vercel.app/
 
 Ou escaneie o QR Code abaixo:
 
-  <img width="448" height="432" alt="image" src="https://github.com/user-attachments/assets/5af58904-5da8-42b5-9238-14f94c929880" />
+  <img width="248" height="232" alt="image" src="https://github.com/user-attachments/assets/5af58904-5da8-42b5-9238-14f94c929880" />
 
 <p align="center">
   <!-- Adicionar imagem do QR Code -->
