@@ -294,6 +294,7 @@ body {
   border-radius: 18px;
   border: 1px solid rgba(255,255,255,0.04);
   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  width: fit-content;
   transition: transform .28s cubic-bezier(.2,.9,.3,1), box-shadow .28s;
 }
 
