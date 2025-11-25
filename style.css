@@ -652,3 +652,15 @@ footer {
   .dropdown { width: 180px; right: 0; left: auto; }
 }
 
+/*cor velocimetro*/
+
+#speedNumber, #rpmNumber {
+    display: inline-block;
+    width: 60px;
+    text-align: right;
+}
+
+.big-value {
+    color: white; 
+    transition: color 0.1s linear; 
+}
