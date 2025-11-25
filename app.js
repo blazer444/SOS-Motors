@@ -204,5 +204,44 @@ document.getElementById('heroDiagnose').addEventListener('click', () => {
   target.scrollIntoView({ behavior: 'smooth' });
 });
 
+// velocimetro 
+
+const speedElement = document.getElementById('speedNumber');
+const rpmElement = document.getElementById('rpmNumber');
+const speedContainer = speedElement.parentElement;
+const rpmContainer = rpmElement.parentElement;
+
+let speed = 0;
+let direction = 1; 
+
+function animateDashboard() {
+    speed += direction;
+
+    if (speed >= 300) direction = -1;
+    if (speed <= 0) direction = 1;
+
+    speedElement.textContent = speed;
+
+
+    const rpm = (speed / 300) * 6;
+    rpmElement.textContent = rpm.toFixed(1);
+
+
+    const progress = speed / 300; 
+
+
+    const r = 255;
+    const g = Math.floor(255 * (1 - progress)); 
+    const b = Math.floor(255 * (1 - progress)); 
+
+    const color = `rgb(${r}, ${g}, ${b})`;
+
+    speedContainer.style.color = color;
+    rpmContainer.style.color = color;
+
+    requestAnimationFrame(animateDashboard);
+}
+
+animateDashboard();
 
 
