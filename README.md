@@ -34,7 +34,8 @@ Ou escaneie o QR Code abaixo:
 Tela introdutória com acesso rápido às funcionalidades principais.
 
 <p align="center">
-  <img width="1337" height="630" alt="image" src="https://github.com/user-attachments/assets/1fd59c94-6398-4d55-a38f-f9e97389b000" />
+  <img width="1336" height="645" alt="image" src="https://github.com/user-attachments/assets/5f19aa3b-ac65-408c-a2a6-effc3815e71a" />
+
 
 </p>
 
@@ -44,7 +45,7 @@ Tela introdutória com acesso rápido às funcionalidades principais.
 Página apresentando informações sobre a proposta e missão do SOS Motors.
 
 <p align="center">
-  <img width="1355" height="641" alt="image" src="https://github.com/user-attachments/assets/051b5d93-7b2e-4840-b0bd-50870056b337" />
+  <img width="1334" height="638" alt="image" src="https://github.com/user-attachments/assets/db0c3069-8db2-4f42-9f96-0ce942674364" />
 
 </p>
 
@@ -55,7 +56,8 @@ Visão geral do sistema, exibindo informações essenciais de forma clara e obje
 
 <p align="center">
   <!-- Adicionar imagem -->
-  <img width="1338" height="633" alt="image" src="https://github.com/user-attachments/assets/64ef7767-cffe-4c77-905b-3ec95b41a98f" />
+  <img width="1337" height="638" alt="image" src="https://github.com/user-attachments/assets/b301a077-51cb-4c3a-a79d-67b360f71f82" />
+
 
 </p>
 
@@ -66,7 +68,8 @@ Formulário simples para cadastrar veículos e suas respectivas placas.
 
 <p align="center">
   <!-- Adicionar imagem -->
-  <img width="1335" height="635" alt="image" src="https://github.com/user-attachments/assets/69c4d3f8-770e-4d51-8e26-92defe3ee370" />
+  <img width="1342" height="639" alt="image" src="https://github.com/user-attachments/assets/b3be1e2d-de84-449d-a031-44d626a305f4" />
+
 
 </p>
 
@@ -77,7 +80,10 @@ Tela dedicada ao encontro de melhores mecânicos próximos a você.
 
 <p align="center">
   <!-- Adicionar imagem -->
-  <img width="1346" height="641" alt="image" src="https://github.com/user-attachments/assets/a47b5aa6-afc2-4d19-94b3-ed354ce76873" />
+  <img width="1336" height="637" alt="image" src="https://github.com/user-attachments/assets/72638908-4dbe-477d-b30f-b3b3673903f1" />
+
+  <img width="1340" height="635" alt="image" src="https://github.com/user-attachments/assets/255a568a-2671-450c-b3b6-ef8321c2ab0d" />
+
 
 </p>
 
